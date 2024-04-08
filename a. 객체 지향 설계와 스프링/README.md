@@ -344,7 +344,7 @@ public class MemberService {
 
 <br/>
 
-### <u> 다형성 만으로는 OCP, DIP 를 지킬 수 없다. </u>
+### <u> 다형성 만으로는 OCP, DIP 를 지킬 수 없다. 그래서 Spring Framework 가 나온 것이다. </u>
 
 <br/>
 
