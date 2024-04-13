@@ -11,6 +11,8 @@ import hello.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
+// factory method 방식
 @Configuration
 public class AppConfig {
 
