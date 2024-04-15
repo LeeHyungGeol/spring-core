@@ -4,14 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 import org.springframework.stereotype.Component;
 
-@Component // memoryMemberRepository
+@Component
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
-
-
-    public MemoryMemberRepository() {
-    }
 
     @Override
     public void save(Member member) {
