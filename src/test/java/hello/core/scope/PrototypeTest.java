@@ -1,5 +1,7 @@
 package hello.core.scope;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import hello.core.scope.SingletonTest.SingletonBean;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
@@ -11,7 +13,11 @@ public class PrototypeTest {
     @Test
     public void prototypeBeanFind() throws Exception {
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeBean.class);
-
+        System.out.println("find prototypeBean1");
+        PrototypeBean prototypeBean1 = ac.getBean(PrototypeBean.class); System.out.println("find prototypeBean2");
+        PrototypeBean prototypeBean2 = ac.getBean(PrototypeBean.class); System.out.println("prototypeBean1 = " + prototypeBean1);
+        System.out.println("prototypeBean2 = " + prototypeBean2);
+        assertThat(prototypeBean1).isNotSameAs(prototypeBean2); ac.close(); //종료
     }
 
     @Scope("prototype")
